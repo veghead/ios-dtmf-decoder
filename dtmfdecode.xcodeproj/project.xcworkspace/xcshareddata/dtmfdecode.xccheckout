@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DC43DA9B-EC82-47A8-B711-7AF6C2AC21D2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>339fb910-ed29-db11-961d-001422732fe2++9743</key>
+		<string>svn+ssh://wetnorks.net/svn2/dtmf</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>dtmfdecode.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>339fb910-ed29-db11-961d-001422732fe2++9743</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>339fb910-ed29-db11-961d-001422732fe2++9743</key>
+		<string>svn+ssh://wetnorks.net/svn2</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn+ssh://wetnorks.net/svn2/dtmf/dtmfdecode.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>339fb910-ed29-db11-961d-001422732fe2++9743</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>339fb910-ed29-db11-961d-001422732fe2++9743</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dtmf-checkout</string>
+		</dict>
+	</array>
+</dict>
+</plist>
