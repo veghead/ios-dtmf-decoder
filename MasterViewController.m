@@ -1,18 +1,18 @@
 //
-//  MainContainerViewController.m
+//  MasterViewController.m
 //  dtmfdecode
 //
 //  Created by Veghead on 11/26/16.
 //
 //
 
-#import "MainContainerViewController.h"
+#import "MasterViewController.h"
 
-@interface MainContainerViewController ()
+@interface MasterViewController ()
 
 @end
 
-@implementation MainContainerViewController
+@implementation MasterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

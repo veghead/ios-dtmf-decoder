@@ -21,7 +21,8 @@
  */
 
 #import "LCDView.h"
-
+UIImageView *disp[LCD_COLS];
+UIImageView *led_disp[8];
 
 @implementation LCDView
 
@@ -62,7 +63,7 @@
 	if (isdigit(chr) || (chr == 'A') || (chr == 'B') || (chr == 'C') || (chr == 'D')
 			|| (chr == '*') || (chr == '#')) {
 		char name[10];
-		snprintf(name,10,"%c.png",chr);;
+		snprintf(name,9,"%c.png",chr);;
 		UIImage *img = [UIImage imageNamed:@(name)];
 		return img;
 	}

@@ -26,11 +26,11 @@
 
 @interface dtmfdecodeAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    dtmfdecodeViewController *viewController;
+    UIViewController *viewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet dtmfdecodeViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIViewController *viewController;
 
 @end
 

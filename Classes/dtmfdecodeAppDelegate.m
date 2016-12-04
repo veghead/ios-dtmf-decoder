@@ -21,7 +21,7 @@
  */
 
 #import "dtmfdecodeAppDelegate.h"
-#import "dtmfdecodeViewController.h"
+#import "MasterViewController.h"
 
 @implementation dtmfdecodeAppDelegate
 
@@ -30,8 +30,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[dtmfdecodeViewController alloc]
-                           initWithNibName:@"dtmfdecodeViewController"
+    self.viewController = [[MasterViewController alloc]
+                           initWithNibName:@"MasterViewController"
                            bundle:[NSBundle mainBundle]];
     self.window.rootViewController = self.viewController;
     self.window.backgroundColor = [UIColor whiteColor];

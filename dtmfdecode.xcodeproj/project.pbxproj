@@ -15,14 +15,14 @@
 		2899E5220DE3E06400AC0155 /* dtmfdecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* dtmfdecodeViewController.xib */; };
 		28D7ACF80DDB3853001CB0EB /* dtmfdecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */; };
 		8D0C243C0F2D100D003DA3F2 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C243B0F2D100D003DA3F2 /* on.png */; };
-		8D1994991DEA1D2100217F6F /* MainContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1994971DEA1D2100217F6F /* MainContainerViewController.m */; };
-		8D19949A1DEA1D2100217F6F /* MainContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1994981DEA1D2100217F6F /* MainContainerViewController.xib */; };
 		8D3BEF2B1B1E8CEE009B0AA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3BEF2A1B1E8CEE009B0AA5 /* Default-568h@2x.png */; };
 		8D3F0D570EE3557500684B0B /* #.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3F0D550EE3557500684B0B /* #.png */; };
 		8D3F0D580EE3557500684B0B /* *.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3F0D560EE3557500684B0B /* *.png */; };
 		8D5A1E100F48C90E0032949B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A1E0F0F48C90E0032949B /* Entitlements.plist */; };
 		8D5F4BAA0FB5DDB5004AAC24 /* settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F4BA90FB5DDB5004AAC24 /* settings.m */; };
 		8D5F4BAC0FB5DDD4004AAC24 /* settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5F4BAB0FB5DDD4004AAC24 /* settings.xib */; };
+		8D71618F1DEA237D003F3F86 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D71618D1DEA237D003F3F86 /* MasterViewController.m */; };
+		8D7161901DEA237D003F3F86 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D71618E1DEA237D003F3F86 /* MasterViewController.xib */; };
 		8D7D88560ED8ABE0002199B4 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D884B0ED8ABE0002199B4 /* 0.png */; };
 		8D7D88570ED8ABE1002199B4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D884C0ED8ABE0002199B4 /* 1.png */; };
 		8D7D88580ED8ABE1002199B4 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D884D0ED8ABE0002199B4 /* 2.png */; };
@@ -58,9 +58,6 @@
 		32CA4F630368D1EE00C91783 /* dtmfdecode_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtmfdecode_Prefix.pch; sourceTree = "<group>"; };
 		8D0C243B0F2D100D003DA3F2 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1994961DEA1D2100217F6F /* MainContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContainerViewController.h; sourceTree = "<group>"; };
-		8D1994971DEA1D2100217F6F /* MainContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerViewController.m; sourceTree = "<group>"; };
-		8D1994981DEA1D2100217F6F /* MainContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainContainerViewController.xib; sourceTree = "<group>"; };
 		8D3BEF2A1B1E8CEE009B0AA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8D3F0D550EE3557500684B0B /* #.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#.png"; sourceTree = "<group>"; };
 		8D3F0D560EE3557500684B0B /* *.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "*.png"; sourceTree = "<group>"; };
@@ -68,6 +65,9 @@
 		8D5F4BA80FB5DDB5004AAC24 /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settings.h; path = ../settings.h; sourceTree = "<group>"; };
 		8D5F4BA90FB5DDB5004AAC24 /* settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = settings.m; path = ../settings.m; sourceTree = "<group>"; };
 		8D5F4BAB0FB5DDD4004AAC24 /* settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settings.xib; sourceTree = "<group>"; };
+		8D71618C1DEA237D003F3F86 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ../MasterViewController.h; sourceTree = "<group>"; };
+		8D71618D1DEA237D003F3F86 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ../MasterViewController.m; sourceTree = "<group>"; };
+		8D71618E1DEA237D003F3F86 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		8D7D884B0ED8ABE0002199B4 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		8D7D884C0ED8ABE0002199B4 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		8D7D884D0ED8ABE0002199B4 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8D71618C1DEA237D003F3F86 /* MasterViewController.h */,
+				8D71618D1DEA237D003F3F86 /* MasterViewController.m */,
 				8D5F4BA80FB5DDB5004AAC24 /* settings.h */,
 				8D5F4BA90FB5DDB5004AAC24 /* settings.m */,
 				8DE35A820ECE433600731786 /* DTMFDecoder.h */,
@@ -120,9 +122,6 @@
 				28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */,
 				8D7D886B0ED8C425002199B4 /* LCDView.h */,
 				8D7D886C0ED8C425002199B4 /* LCDView.m */,
-				8D1994961DEA1D2100217F6F /* MainContainerViewController.h */,
-				8D1994971DEA1D2100217F6F /* MainContainerViewController.m */,
-				8D1994981DEA1D2100217F6F /* MainContainerViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D71618E1DEA237D003F3F86 /* MasterViewController.xib */,
 				8D5A1E0F0F48C90E0032949B /* Entitlements.plist */,
 				8D0C243B0F2D100D003DA3F2 /* on.png */,
 				8D3F0D550EE3557500684B0B /* #.png */,
@@ -265,11 +265,11 @@
 				8D7D885C0ED8ABE1002199B4 /* 6.png in Resources */,
 				8D7D885D0ED8ABE1002199B4 /* 7.png in Resources */,
 				8D7D885E0ED8ABE1002199B4 /* 8.png in Resources */,
-				8D19949A1DEA1D2100217F6F /* MainContainerViewController.xib in Resources */,
 				8D7D885F0ED8ABE1002199B4 /* 9.png in Resources */,
 				8D7D88600ED8ABE1002199B4 /* decoder.png in Resources */,
 				8DC642810ED9D3B9002D18A1 /* icon.png in Resources */,
 				8D92B8D60EDA176600483EBD /* c5.png in Resources */,
+				8D7161901DEA237D003F3F86 /* MasterViewController.xib in Resources */,
 				8D92B8D70EDA176600483EBD /* dtmf.png in Resources */,
 				8D3F0D570EE3557500684B0B /* #.png in Resources */,
 				8D3BEF2B1B1E8CEE009B0AA5 /* Default-568h@2x.png in Resources */,
@@ -293,8 +293,8 @@
 				28D7ACF80DDB3853001CB0EB /* dtmfdecodeViewController.m in Sources */,
 				8DE35A840ECE433600731786 /* DTMFDecoder.m in Sources */,
 				8D7D886D0ED8C425002199B4 /* LCDView.m in Sources */,
-				8D1994991DEA1D2100217F6F /* MainContainerViewController.m in Sources */,
 				8D5F4BAA0FB5DDB5004AAC24 /* settings.m in Sources */,
+				8D71618F1DEA237D003F3F86 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
