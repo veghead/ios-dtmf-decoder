@@ -14,24 +14,131 @@
 
 @implementation MasterViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
+@synthesize lcdBuffer, data, decoder, settingsViewController;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
-#pragma mark - Navigation
+ // Implement loadView to create a view hierarchy programmatically.
+ - (void)loadView {
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+// Implement viewDidLoad to do additional setup after loading the view.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view setNeedsLayout];
+    DTMFDecoder *dec = [[DTMFDecoder alloc] init];
+    [self setDecoder:dec];
+    [(LCDView *)self.view setLCDString:[self.decoder getDetectBuffer]];
+    UIViewController *settingsVC = [[UIViewController alloc] initWithNibName:@"settings" bundle:nil];
+    [settingsVC loadView];
+    [self setSettingsViewController:settingsVC];
+    [(settings *)settingsVC.view setMasterController:(id *)self];
+    [(settings *)settingsVC.view setup];
+    [settingsVC release];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(tick:) userInfo:self repeats:YES];
 }
-*/
+
+
+
+- (void)tick:(NSTimer *)timer
+{
+    [(LCDView *)self.view setLCDString:[self.decoder getDetectBuffer]];
+    //NSLog(@" buffer:%s", [self.decoder getDetectBuffer]);
+    [(LCDView *)self.view setLEDs:[self.decoder ledbin]];
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
+- (void)flipToSettings {
+    settings *settingsView = (settings *)settingsViewController.view;
+    [settingsView setBackgroundColor:[UIColor viewFlipsideBackgroundColor]];
+    [settingsView setPowerMethod:[self.decoder getPowerMethod]];
+    [settingsView setNoiseLevel:[self.decoder getNoiseLevel]];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
+    [settingsViewController viewWillAppear:YES];
+    [self viewWillDisappear:YES];
+    [self.view addSubview:settingsView];
+    [self viewDidDisappear:YES];
+    [settingsViewController viewDidAppear:YES];
+    [UIView commitAnimations];
+}
+
+- (IBAction) powerSwitch
+{
+}
+
+- (IBAction) sendButtonPressed
+{
+}
+
+- (IBAction) settingsButtonPressed
+{
+    NSLog(@"SETUP");
+    [self flipToSettings];
+}
+
+
+- (IBAction) clearButtonPressed
+{
+    NSLog(@"clear pressed");
+    [self.decoder resetBuffer];
+}
+
+
+- (IBAction) copyButtonPressed
+{
+    NSLog(@"copy pressed");
+    [self.decoder copyBuffer];
+}
+
+
+- (IBAction) flipBack
+{
+    NSLog(@"flipBack");
+    settings *settingsView = (settings *)settingsViewController.view;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+    [settingsViewController viewWillDisappear:YES];
+    [self viewWillAppear:YES];
+    [settingsView removeFromSuperview];
+    [settingsViewController viewDidDisappear:YES];
+    [self viewDidAppear:YES];
+    [UIView commitAnimations];
+}
+
+
+- (void) setNoiseLevel:(float)noiseLevel
+{
+    [self.decoder setNoiseLevel:noiseLevel];
+}
+
+- (void) setPowerMethod:(NSInteger)method
+{
+    [self.decoder setPowerMethod:method];
+}
+
+- (void)dealloc {
+    [super dealloc];
+}
+
 
 @end

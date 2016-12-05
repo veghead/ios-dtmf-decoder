@@ -35,6 +35,7 @@
                            bundle:[NSBundle mainBundle]];
     self.window.rootViewController = self.viewController;
     self.window.backgroundColor = [UIColor whiteColor];
+    [viewController.view setFrame:[[UIScreen mainScreen] bounds]];
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
     return YES;
