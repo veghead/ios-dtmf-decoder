@@ -34,7 +34,7 @@
     [self.view setNeedsLayout];
     DTMFDecoder *dec = [[DTMFDecoder alloc] init];
     [self setDecoder:dec];
-    [(LCDView *)self.view setLCDString:[self.decoder getDetectBuffer]];
+    [[self lcdView] setLCDString:[self.decoder getDetectBuffer]];
     UIViewController *settingsVC = [[UIViewController alloc] initWithNibName:@"settings" bundle:nil];
     [settingsVC loadView];
     [self setSettingsViewController:settingsVC];
@@ -49,9 +49,9 @@
 
 - (void)tick:(NSTimer *)timer
 {
-    [(LCDView *)self.view setLCDString:[self.decoder getDetectBuffer]];
+    [self.lcdView setLCDString:[self.decoder getDetectBuffer]];
     //NSLog(@" buffer:%s", [self.decoder getDetectBuffer]);
-    [(LCDView *)self.view setLEDs:[self.decoder ledbin]];
+    [self.lcdView setLEDs:[self.decoder ledbin]];
 }
 
 
@@ -67,7 +67,7 @@
 
 - (void)flipToSettings {
     settings *settingsView = (settings *)settingsViewController.view;
-    [settingsView setBackgroundColor:[UIColor viewFlipsideBackgroundColor]];
+    [settingsView setFrame:[self.view frame]];
     [settingsView setPowerMethod:[self.decoder getPowerMethod]];
     [settingsView setNoiseLevel:[self.decoder getNoiseLevel]];
     [UIView beginAnimations:nil context:NULL];

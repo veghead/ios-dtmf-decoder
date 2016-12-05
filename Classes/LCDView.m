@@ -21,15 +21,22 @@
  */
 
 #import "LCDView.h"
+#import "LCDChar.h"
+
 UIImageView *disp[LCD_COLS];
 UIImageView *led_disp[8];
 
 @implementation LCDView
 
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        // Initialization code
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
+        for (long viewId = 0 ; viewId < LCD_COLS ; viewId++) {
+            LCDChar *cr = [[LCDChar alloc] initWithFrame:CGRectMake((13 * viewId) + 8, 26, 0, 0)];
+            [cr setChar:'#'];
+            [self addSubview:cr];
+            disp[viewId] = cr;
+        }
     }
     return self;
 }

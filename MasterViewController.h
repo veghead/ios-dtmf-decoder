@@ -14,6 +14,7 @@
 @interface MasterViewController : UIViewController {
     IBOutlet UISwitch *powerOut;
     IBOutlet UILabel *powerLabel;
+    IBOutlet LCDView *lcdView;
     char *lcdBuffer;
     int mode;
     NSData *data;
@@ -39,5 +40,5 @@
 @property (readwrite, retain)	DTMFDecoder *decoder;
 @property (readwrite, assign)	NSData *data;
 @property (readwrite, assign)	char *lcdBuffer;
-
+@property (readwrite, assign)	LCDView *lcdView;
 @end

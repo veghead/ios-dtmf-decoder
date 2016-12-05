@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MasterViewController">
             <connections>
+                <outlet property="lcdView" destination="amQ-Ru-ErW" id="N6G-ry-AET"/>
                 <outlet property="powerLabel" destination="2mT-6i-Jcj" id="nUX-IW-eRQ"/>
+                <outlet property="powerOut" destination="QSk-JC-c5H" id="Qp3-N3-sWd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +28,7 @@
                         <constraint firstAttribute="height" constant="350" id="dyU-bm-3ib"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Ru-ErW" customClass="LCDView">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Ru-ErW" userLabel="LCDView" customClass="LCDView">
                     <rect key="frame" x="97" y="227" width="209" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.77900000000000003" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dtmf.png" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-fd-KVg">
