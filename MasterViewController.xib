@@ -14,6 +14,7 @@
                 <outlet property="lcdView" destination="amQ-Ru-ErW" id="N6G-ry-AET"/>
                 <outlet property="powerLabel" destination="2mT-6i-Jcj" id="nUX-IW-eRQ"/>
                 <outlet property="powerOut" destination="QSk-JC-c5H" id="Qp3-N3-sWd"/>
+                <outlet property="textView" destination="qpm-Pp-ogV" id="bvn-Fp-BrC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -87,12 +88,12 @@
                     <color key="textColor" red="0.96075932814049603" green="1" blue="0.95695667695222209" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Pp-ogV">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Pp-ogV">
                     <rect key="frame" x="28" y="401" width="320" height="185"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" red="0.25889493944187014" green="0.25749550733677895" blue="0.26029437154696133" alpha="1" colorSpace="calibratedRGB"/>

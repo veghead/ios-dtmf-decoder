@@ -22,8 +22,8 @@
 #import "DTMFDecoder.h"
 #define MAX_HOLDING_BUFFER			200
 
-#define kMinNoiseTolerenceFactor	1.5
-#define kMaxNoiseTolerenceFactor	6.5
+#define kMinNoiseToleranceFactor	1.5
+#define kMaxNoiseToleranceFactor	6.5
 
 static double	powers[NUM_FREQS];		// Location to store the powers for all the frequencies
 static double	filterBuf0[NUM_FREQS];	// Buffer for the IIR filter slot 0
@@ -32,7 +32,7 @@ static char		holdingBuffer[2];
 static int		holdingBufferCount[2];
 static int		powerMeasurementMethod;	// 0 = Peak Value -> RMS, 1 = Sqrt of Sum of Squares, 2 = Sum of Abs Values
 static BOOL		rawOutput;
-static double	noiseTolerenceFactor;
+static double	noiseToleranceFactor;
 
 
 
@@ -106,7 +106,7 @@ char lookupDTMFCode(void)
 	for (int i=0; i<NUM_FREQS; i++) {
 		if (( i == max1Index ) || ( i == max2Index ))	continue;
 		
-		if (powers[i] > ( powers[max2Index] / noiseTolerenceFactor )) {valid = NO;break;}
+		if (powers[i] > ( powers[max2Index] / noiseToleranceFactor )) {valid = NO;break;}
 	}
 	
 	if ( valid ) {
@@ -132,7 +132,7 @@ char lookupDTMFCode(void)
 			// We have to rows or 2 cols, fail
 			//NSLog(@"We have 2 rows or 2 columns, must have gotten it wrong");
 		} else {
-			NSLog(@"DTMFcodey %c",dtmfCodes[row][col-4]);
+			NSLog(@"DTMFcode %c",dtmfCodes[row][col-4]);
 			return dtmfCodes[row][col-4];		// We got it
 		}
 	}
@@ -424,8 +424,8 @@ void AudioInputCallback(void *inUserData,
 - (void) setNoiseLevel:(float)noiseLevel
 {
 	if (noiseLevel <= 0 || noiseLevel >1) noiseLevel = 0.5;
-	noiseTolerenceFactor	= (double)(((1.0 - noiseLevel) * (kMaxNoiseTolerenceFactor - kMinNoiseTolerenceFactor)) + kMinNoiseTolerenceFactor);
-	NSLog(@"Noise Tolerence Factor: %lf", noiseTolerenceFactor);
+	noiseToleranceFactor	= (double)(((1.0 - noiseLevel) * (kMaxNoiseToleranceFactor - kMinNoiseToleranceFactor)) + kMinNoiseToleranceFactor);
+	NSLog(@"Noise Tolerance Factor: %lf", noiseToleranceFactor);
 	[defaults setFloat:noiseLevel forKey:@"noiseLevel"];
 }
 

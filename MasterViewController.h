@@ -14,6 +14,7 @@
 @interface MasterViewController : UIViewController {
     IBOutlet UISwitch *powerOut;
     IBOutlet UILabel *powerLabel;
+    IBOutlet UITextView *textView;
     int mode;
     UIPasteboard *uip;
 }

@@ -28,7 +28,6 @@
 
 
 - (void)setup {
-	NSLog(@"erewego");
 	powerMethods = [@[@"Peak Value RMS", @"Sqrt Sum Squares", @"Sum Abs"] retain];
 }
 

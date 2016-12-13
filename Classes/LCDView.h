@@ -38,5 +38,4 @@
 
 - (void)setLCDString:(char*)content;
 - (void)setLEDs:(int)bin;
-- (UIImage *)charToImage:(char) c;
 @end

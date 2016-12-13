@@ -32,13 +32,19 @@
     [self.view setNeedsLayout];
     DTMFDecoder *dec = [[DTMFDecoder alloc] init];
     [self setDecoder:dec];
+    
     [[self lcdView] setLCDString:[self.decoder getDetectBuffer]];
+    
     UIViewController *settingsVC = [[UIViewController alloc] initWithNibName:@"settings" bundle:nil];
     [settingsVC loadView];
     [self setSettingsViewController:settingsVC];
     [(settings *)settingsVC.view setMasterController:(id *)self];
     [(settings *)settingsVC.view setup];
     [settingsVC release];
+    
+    [[textView layer] setBorderColor:[[UIColor blackColor] CGColor]];
+    [[textView layer] setBorderWidth:2.5];
+    [[textView layer] setCornerRadius:5];
     
     [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(tick:) userInfo:self repeats:YES];
 }

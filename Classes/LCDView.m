@@ -26,8 +26,7 @@
 
 @implementation LCDView
 
-static UIImageView *disp[LCD_COLS];
-static UIImageView *led_disp[8];
+static LCDChar *disp[LCD_COLS];
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
@@ -49,7 +48,7 @@ static UIImageView *led_disp[8];
 	}
 	//NSLog(@"LCDString %d len",strlen(content));
 	for (int in = 0; in < LCD_COLS; in++) {
-		[disp[in] setImage:[self charToImage:*content]];
+		[disp[in] setChar:*content];
 		if (*content) content++;
 	}
 }
@@ -62,19 +61,6 @@ static UIImageView *led_disp[8];
 		[disp[in] setHidden:onoff];
 		bin >>= 1;	
 	}	
-}
-
-
-- (UIImage *)charToImage:(char) chr
-{
-	if (isdigit(chr) || (chr == 'A') || (chr == 'B') || (chr == 'C') || (chr == 'D')
-			|| (chr == '*') || (chr == '#')) {
-		char name[10];
-		snprintf(name,9,"%c.png",chr);;
-		UIImage *img = [UIImage imageNamed:@(name)];
-		return img;
-	}
-	return nil;
 }
 
 
