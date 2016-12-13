@@ -25,9 +25,6 @@
 
 @implementation dtmfdecodeAppDelegate
 
-@synthesize window;
-@synthesize viewController;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[MasterViewController alloc]
@@ -35,15 +32,15 @@
                            bundle:[NSBundle mainBundle]];
     self.window.rootViewController = self.viewController;
     self.window.backgroundColor = [UIColor whiteColor];
-    [viewController.view setFrame:[[UIScreen mainScreen] bounds]];
-    [window addSubview:viewController.view];
-    [window makeKeyAndVisible];
+    [self.viewController.view setFrame:[[UIScreen mainScreen] bounds]];
+    [self.window addSubview:self.viewController.view];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)dealloc {
-    [viewController release];
-    [window release];
+    [self.viewController release];
+    [self.window release];
     [super dealloc];
 }
 

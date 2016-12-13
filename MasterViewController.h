@@ -14,16 +14,10 @@
 @interface MasterViewController : UIViewController {
     IBOutlet UISwitch *powerOut;
     IBOutlet UILabel *powerLabel;
-    IBOutlet LCDView *lcdView;
-    char *lcdBuffer;
     int mode;
-    NSData *data;
-    DTMFDecoder *decoder;
-    UIViewController *settingsViewController;
     UIPasteboard *uip;
 }
 
-- (IBAction) modeButtonPressed;
 - (IBAction) sendButtonPressed;
 - (IBAction) settingsButtonPressed;
 - (IBAction) clearButtonPressed;

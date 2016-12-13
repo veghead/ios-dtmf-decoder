@@ -14,8 +14,6 @@
 
 @implementation MasterViewController
 
-@synthesize lcdBuffer, data, decoder, settingsViewController;
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -66,18 +64,18 @@
 }
 
 - (void)flipToSettings {
-    settings *settingsView = (settings *)settingsViewController.view;
+    settings *settingsView = (settings *)self.settingsViewController.view;
     [settingsView setFrame:[self.view frame]];
     [settingsView setPowerMethod:[self.decoder getPowerMethod]];
     [settingsView setNoiseLevel:[self.decoder getNoiseLevel]];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-    [settingsViewController viewWillAppear:YES];
+    [self.settingsViewController viewWillAppear:YES];
     [self viewWillDisappear:YES];
     [self.view addSubview:settingsView];
     [self viewDidDisappear:YES];
-    [settingsViewController viewDidAppear:YES];
+    [self.settingsViewController viewDidAppear:YES];
     [UIView commitAnimations];
 }
 
@@ -113,14 +111,14 @@
 - (IBAction) flipBack
 {
     NSLog(@"flipBack");
-    settings *settingsView = (settings *)settingsViewController.view;
+    settings *settingsView = (settings *)self.settingsViewController.view;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
-    [settingsViewController viewWillDisappear:YES];
+    [self.settingsViewController viewWillDisappear:YES];
     [self viewWillAppear:YES];
     [settingsView removeFromSuperview];
-    [settingsViewController viewDidDisappear:YES];
+    [self.settingsViewController viewDidDisappear:YES];
     [self viewDidAppear:YES];
     [UIView commitAnimations];
 }

@@ -396,7 +396,8 @@ void AudioInputCallback(void *inUserData,
 {
 	// Init state variables
 	recordState.recording = false;	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopRecording) name:UIApplicationWillTerminateNotification object:nil];	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopRecording) name:UIApplicationWillTerminateNotification object:nil];
+    [super awakeFromNib];
 }
 
 

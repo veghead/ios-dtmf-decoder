@@ -37,7 +37,6 @@
 - (void)setup;
 - (IBAction) flipBack;
 - (IBAction) resetDefaults;
-- (IBAction) quitButtonPressed;
 - (void) setPowerMethod:(NSInteger)method;
 - (void) setNoiseLevel:(float)level;
 @end

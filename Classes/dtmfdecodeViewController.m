@@ -86,7 +86,7 @@
 
 - (void)flipToSettings {
 	settings *settingsView = (settings *)settingsViewController.view;
-	[settingsView setBackgroundColor:[UIColor viewFlipsideBackgroundColor]];
+	//[settingsView setBackgroundColor:[UIColor viewFlipsideBackgroundColor]];
 	[settingsView setPowerMethod:[self.decoder getPowerMethod]];
 	[settingsView setNoiseLevel:[self.decoder getNoiseLevel]];
 	[UIView beginAnimations:nil context:NULL];

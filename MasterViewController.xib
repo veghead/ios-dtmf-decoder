@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decoder.png" translatesAutoresizingMaskIntoConstraints="NO" id="TAw-f0-JF0">
-                    <rect key="frame" x="28" y="20" width="320" height="350"/>
+                    <rect key="frame" x="27.5" y="20" width="320" height="350"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="350" id="dyU-bm-3ib"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Ru-ErW" userLabel="LCDView" customClass="LCDView">
-                    <rect key="frame" x="97" y="227" width="209" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Ru-ErW" userLabel="LCDView" customClass="LCDView">
+                    <rect key="frame" x="96.5" y="227" width="209.5" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.77900000000000003" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dtmf.png" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-fd-KVg">
                             <rect key="frame" x="8" y="8" width="52" height="13"/>
@@ -42,6 +42,7 @@
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="qP6-fd-KVg" firstAttribute="leading" secondItem="amQ-Ru-ErW" secondAttribute="leading" constant="8" id="DA0-ma-aGV"/>
+                        <constraint firstAttribute="height" constant="50" id="NyT-yC-BW7"/>
                         <constraint firstItem="qP6-fd-KVg" firstAttribute="top" secondItem="amQ-Ru-ErW" secondAttribute="top" constant="8" id="b6b-Pg-S6N"/>
                     </constraints>
                 </view>
@@ -70,14 +71,18 @@
                     </items>
                 </toolbar>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QSk-JC-c5H">
-                    <rect key="frame" x="280" y="318" width="51" height="31"/>
+                    <rect key="frame" x="279.5" y="318" width="51" height="31"/>
                     <color key="onTintColor" red="1" green="0.16020765579999999" blue="0.17835151069999999" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="powerSwitch" destination="-1" eventType="valueChanged" id="XGy-Sv-tPK"/>
                     </connections>
                 </switch>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mT-6i-Jcj">
-                    <rect key="frame" x="280" y="357" width="49" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mT-6i-Jcj">
+                    <rect key="frame" x="279.5" y="357" width="49" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="MPh-Gz-HIY"/>
+                        <constraint firstAttribute="height" constant="21" id="veZ-b0-arc"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.96075932814049603" green="1" blue="0.95695667695222209" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

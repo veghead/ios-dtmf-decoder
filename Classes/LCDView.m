@@ -31,6 +31,7 @@ UIImageView *led_disp[8];
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
+        // Create LCD characters
         for (long viewId = 0 ; viewId < LCD_COLS ; viewId++) {
             LCDChar *cr = [[LCDChar alloc] initWithFrame:CGRectMake((13 * viewId) + 8, 26, 0, 0)];
             [cr setChar:'#'];
@@ -47,7 +48,6 @@ UIImageView *led_disp[8];
 		content = content + (strlen(content)-LCD_COLS);
 	}
 	//NSLog(@"LCDString %d len",strlen(content));
-	UIImageView *disp[LCD_COLS] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o};
 	for (int in = 0; in < LCD_COLS; in++) {
 		[disp[in] setImage:[self charToImage:*content]];
 		if (*content) content++;

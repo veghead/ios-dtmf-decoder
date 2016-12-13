@@ -25,21 +25,6 @@
 
 @interface LCDView : UIView {
 	IBOutlet UIImageView *modeDisplay;
-	IBOutlet UIImageView *a;
-	IBOutlet UIImageView *b;
-	IBOutlet UIImageView *c;
-	IBOutlet UIImageView *d;
-	IBOutlet UIImageView *e;
-	IBOutlet UIImageView *f;
-	IBOutlet UIImageView *g;
-	IBOutlet UIImageView *h;
-	IBOutlet UIImageView *i;
-	IBOutlet UIImageView *j;
-	IBOutlet UIImageView *k;
-	IBOutlet UIImageView *l;
-	IBOutlet UIImageView *m;
-	IBOutlet UIImageView *n;
-	IBOutlet UIImageView *o;
 
 	IBOutlet UIImageView *la;
 	IBOutlet UIImageView *lb;
