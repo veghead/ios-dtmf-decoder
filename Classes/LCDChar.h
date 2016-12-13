@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define CHAR_WIDTH  10
+#define CHAR_HEIGHT 14
 
 @interface LCDChar : UIImageView
 

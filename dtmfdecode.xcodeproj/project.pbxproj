@@ -41,6 +41,10 @@
 		8D92B8D60EDA176600483EBD /* c5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D92B8D40EDA176600483EBD /* c5.png */; };
 		8D92B8D70EDA176600483EBD /* dtmf.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D92B8D50EDA176600483EBD /* dtmf.png */; };
 		8DC642810ED9D3B9002D18A1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DC642800ED9D3B9002D18A1 /* icon.png */; };
+		8DD523821DF5FA1500B70DBB /* D.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD5237E1DF5FA1500B70DBB /* D.png */; };
+		8DD523831DF5FA1500B70DBB /* C.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD5237F1DF5FA1500B70DBB /* C.png */; };
+		8DD523841DF5FA1500B70DBB /* B.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD523801DF5FA1500B70DBB /* B.png */; };
+		8DD523851DF5FA1500B70DBB /* A.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD523811DF5FA1500B70DBB /* A.png */; };
 		8DD8008E0EEC98200082C570 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD8008D0EEC98200082C570 /* Default.png */; };
 		8DE35A840ECE433600731786 /* DTMFDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE35A830ECE433600731786 /* DTMFDecoder.m */; };
 /* End PBXBuildFile section */
@@ -89,6 +93,10 @@
 		8D92B8D40EDA176600483EBD /* c5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c5.png; sourceTree = "<group>"; };
 		8D92B8D50EDA176600483EBD /* dtmf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dtmf.png; sourceTree = "<group>"; };
 		8DC642800ED9D3B9002D18A1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8DD5237E1DF5FA1500B70DBB /* D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = D.png; sourceTree = "<group>"; };
+		8DD5237F1DF5FA1500B70DBB /* C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C.png; sourceTree = "<group>"; };
+		8DD523801DF5FA1500B70DBB /* B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B.png; sourceTree = "<group>"; };
+		8DD523811DF5FA1500B70DBB /* A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A.png; sourceTree = "<group>"; };
 		8DD8008D0EEC98200082C570 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8DE35A820ECE433600731786 /* DTMFDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTMFDecoder.h; path = ../DTMFDecoder.h; sourceTree = "<group>"; };
 		8DE35A830ECE433600731786 /* DTMFDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTMFDecoder.m; path = ../DTMFDecoder.m; sourceTree = "<group>"; };
@@ -164,6 +172,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DD5237E1DF5FA1500B70DBB /* D.png */,
+				8DD5237F1DF5FA1500B70DBB /* C.png */,
+				8DD523801DF5FA1500B70DBB /* B.png */,
+				8DD523811DF5FA1500B70DBB /* A.png */,
 				8D71618E1DEA237D003F3F86 /* MasterViewController.xib */,
 				8D5A1E0F0F48C90E0032949B /* Entitlements.plist */,
 				8D0C243B0F2D100D003DA3F2 /* on.png */,
@@ -272,6 +284,7 @@
 				8D7D885E0ED8ABE1002199B4 /* 8.png in Resources */,
 				8D7D885F0ED8ABE1002199B4 /* 9.png in Resources */,
 				8D7D88600ED8ABE1002199B4 /* decoder.png in Resources */,
+				8DD523821DF5FA1500B70DBB /* D.png in Resources */,
 				8DC642810ED9D3B9002D18A1 /* icon.png in Resources */,
 				8D92B8D60EDA176600483EBD /* c5.png in Resources */,
 				8D7161901DEA237D003F3F86 /* MasterViewController.xib in Resources */,
@@ -282,6 +295,9 @@
 				8DD8008E0EEC98200082C570 /* Default.png in Resources */,
 				8D0C243C0F2D100D003DA3F2 /* on.png in Resources */,
 				8D5A1E100F48C90E0032949B /* Entitlements.plist in Resources */,
+				8DD523831DF5FA1500B70DBB /* C.png in Resources */,
+				8DD523851DF5FA1500B70DBB /* A.png in Resources */,
+				8DD523841DF5FA1500B70DBB /* B.png in Resources */,
 				8D5F4BAC0FB5DDD4004AAC24 /* settings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

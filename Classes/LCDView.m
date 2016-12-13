@@ -23,18 +23,18 @@
 #import "LCDView.h"
 #import "LCDChar.h"
 
-UIImageView *disp[LCD_COLS];
-UIImageView *led_disp[8];
 
 @implementation LCDView
 
+static UIImageView *disp[LCD_COLS];
+static UIImageView *led_disp[8];
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
         // Create LCD characters
         for (long viewId = 0 ; viewId < LCD_COLS ; viewId++) {
             LCDChar *cr = [[LCDChar alloc] initWithFrame:CGRectMake((13 * viewId) + 8, 26, 0, 0)];
-            [cr setChar:'#'];
+            [cr setChar:'A'];
             [self addSubview:cr];
             disp[viewId] = cr;
         }

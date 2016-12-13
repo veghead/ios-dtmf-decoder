@@ -6,8 +6,6 @@
 //
 //
 
-#define CHAR_WIDTH  10
-#define CHAR_HEIGHT 14
 #import "LCDChar.h"
 
 @implementation LCDChar

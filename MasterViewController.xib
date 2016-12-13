@@ -87,10 +87,18 @@
                     <color key="textColor" red="0.96075932814049603" green="1" blue="0.95695667695222209" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Pp-ogV">
+                    <rect key="frame" x="28" y="401" width="320" height="185"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.25889493944187014" green="0.25749550733677895" blue="0.26029437154696133" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="QSk-JC-c5H" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="bottom" constant="-52" id="4DJ-mi-9aJ"/>
+                <constraint firstItem="qpm-Pp-ogV" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="bottom" constant="31" id="Adb-l1-R5e"/>
                 <constraint firstItem="TAw-f0-JF0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Arj-WP-Av8"/>
                 <constraint firstItem="amQ-Ru-ErW" firstAttribute="leading" secondItem="TAw-f0-JF0" secondAttribute="leading" constant="69" id="HSM-Zw-ejJ"/>
                 <constraint firstItem="TAw-f0-JF0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="O3m-rv-wPP"/>
@@ -102,8 +110,11 @@
                 <constraint firstAttribute="bottom" secondItem="1lL-FJ-JKo" secondAttribute="bottom" id="g0b-TA-C8r"/>
                 <constraint firstItem="2mT-6i-Jcj" firstAttribute="centerX" secondItem="QSk-JC-c5H" secondAttribute="centerX" id="gYa-6S-qdN"/>
                 <constraint firstItem="amQ-Ru-ErW" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="top" constant="207" id="ghX-Kt-Ml8"/>
+                <constraint firstItem="qpm-Pp-ogV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="jp3-bf-X1E"/>
+                <constraint firstAttribute="trailing" secondItem="qpm-Pp-ogV" secondAttribute="trailing" constant="27" id="k8y-Fe-sVW"/>
+                <constraint firstItem="qpm-Pp-ogV" firstAttribute="bottom" secondItem="1lL-FJ-JKo" secondAttribute="top" constant="-37" id="p7S-0a-2sB"/>
             </constraints>
-            <point key="canvasLocation" x="85.5" y="-1.5"/>
+            <point key="canvasLocation" x="-118.5" y="-22.5"/>
         </view>
         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="TcW-1g-4hF">
             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
