@@ -277,87 +277,92 @@ void AudioInputCallback(void *inUserData,
 -(instancetype) init
 {
 	[super init];
+    recordState.detectBuffer = (char *)calloc(1,DETECTBUFFERLEN);
 	defaults = [NSUserDefaults standardUserDefaults];
 	[self loadSettings];
 	[self setCurrentFreqs:nil];
-	[self startRecording];
 	uip = [UIPasteboard generalPasteboard];
 	return self;
 }
 
+
 -(void) startRecording
 {
-	for(int i = 0 ; i < 2 ; i++) {		
-		holdingBufferCount[i] = 0;
-		holdingBuffer[i] = ' ';
-	}
-	AudioQueueBufferRef qref[NUM_BUFFERS];
-	currentFreqs = nil;
-	recordState.detectBuffer = (char *)calloc(1,DETECTBUFFERLEN);
-	
-	// these statements define the audio stream basic description
-	// for the file to record into.
-	audioFormat.mSampleRate			= SAMPLING_RATE;
-	audioFormat.mFormatID			= kAudioFormatLinearPCM;
-	audioFormat.mFormatFlags		= kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
-	audioFormat.mFramesPerPacket	= 1;
-	audioFormat.mChannelsPerFrame	= 1;
-	audioFormat.mBitsPerChannel		= 16;
-	audioFormat.mBytesPerPacket		= 2;
-	audioFormat.mBytesPerFrame		= 2;
-	audioFormat.mReserved			= 0;
-	
+    @synchronized (self) {
+        if (recordState.recording == true) {
+            return;
+        }
+        
+        for(int i = 0 ; i < 2 ; i++) {
+            holdingBufferCount[i] = 0;
+            holdingBuffer[i] = ' ';
+        }
+        AudioQueueBufferRef qref[NUM_BUFFERS];
+        currentFreqs = nil;
+        
+        // these statements define the audio stream basic description
+        // for the file to record into.
+        audioFormat.mSampleRate			= SAMPLING_RATE;
+        audioFormat.mFormatID			= kAudioFormatLinearPCM;
+        audioFormat.mFormatFlags		= kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+        audioFormat.mFramesPerPacket	= 1;
+        audioFormat.mChannelsPerFrame	= 1;
+        audioFormat.mBitsPerChannel		= 16;
+        audioFormat.mBytesPerPacket		= 2;
+        audioFormat.mBytesPerFrame		= 2;
+        audioFormat.mReserved			= 0;
+        
 
-	OSStatus status;
-	
-	
-	// Create the new audio queue
-	status = AudioQueueNewInput (&audioFormat,
-						AudioInputCallback,
-						&recordState, // User Data
-						CFRunLoopGetCurrent(),
-						kCFRunLoopCommonModes,
-						0, // Reserved
-						&recordState.queue
-						);
-	
-	if (status != 0) {
-	    NSLog(@"Can't create new input");
-		return;
-	}
-	
-	// Get the *actual* recording format back from the queue's audio converter.
-	// We may not have been given what we asked for.
-	UInt32 fsize = sizeof(audioFormat);
-	
-	AudioQueueGetProperty(recordState.queue,
-						  kAudioQueueProperty_StreamDescription,	// this constant is only available in iPhone OS
-						  &audioFormat,
-						  &fsize
-						  );
-	
-	if (audioFormat.mSampleRate != SAMPLING_RATE) {
-		NSLog(@"Wrong sample rate !");
-		return;
-	}
-	
-	for (int i = 0; i < NUM_BUFFERS; ++i) {
-		//Allocate buffer. Size is in bytes.
-		AudioQueueAllocateBuffer(recordState.queue, BUFFER_SIZE, &qref[i]);
-		AudioQueueEnqueueBuffer(recordState.queue, qref[i] , 0, NULL);			
-	}
+        OSStatus status;
+        
+        
+        // Create the new audio queue
+        status = AudioQueueNewInput (&audioFormat,
+                            AudioInputCallback,
+                            &recordState, // User Data
+                            CFRunLoopGetCurrent(),
+                            kCFRunLoopCommonModes,
+                            0, // Reserved
+                            &recordState.queue
+                            );
+        
+        if (status != 0) {
+            NSLog(@"Can't create new input");
+            return;
+        }
+        
+        // Get the *actual* recording format back from the queue's audio converter.
+        // We may not have been given what we asked for.
+        UInt32 fsize = sizeof(audioFormat);
+        
+        AudioQueueGetProperty(recordState.queue,
+                              kAudioQueueProperty_StreamDescription,	// this constant is only available in iPhone OS
+                              &audioFormat,
+                              &fsize
+                              );
+        
+        if (audioFormat.mSampleRate != SAMPLING_RATE) {
+            NSLog(@"Wrong sample rate !");
+            return;
+        }
+        
+        for (int i = 0; i < NUM_BUFFERS; ++i) {
+            //Allocate buffer. Size is in bytes.
+            AudioQueueAllocateBuffer(recordState.queue, BUFFER_SIZE, &qref[i]);
+            AudioQueueEnqueueBuffer(recordState.queue, qref[i] , 0, NULL);			
+        }
 
-	last = ' ';
-	lastcount = 0;
-	gaplen = 0;
-	[self resetBuffer];
-	
-	AudioQueueStart(recordState.queue,NULL);
-	NSLog(@"started queue");
-	recordState.recording = true; 
-	running = YES;
-	return;
-	// Animation timer	
+        last = ' ';
+        lastcount = 0;
+        gaplen = 0;
+        [self resetBuffer];
+        
+        AudioQueueStart(recordState.queue,NULL);
+        NSLog(@"started queue");
+        recordState.recording = true; 
+        running = YES;
+        return;
+    }
 }
 
 
@@ -379,15 +384,17 @@ void AudioInputCallback(void *inUserData,
 - (void)stopRecording
 {
 	NSLog(@"Stop Recording");
-	recordState.recording = false;
-	
-	AudioQueueStop(recordState.queue, true);
-	 
-	for(int i = 0; i < NUM_BUFFERS; i++)
-		AudioQueueFreeBuffer(recordState.queue, recordState.buffers[i]);
-	
-	AudioQueueDispose(recordState.queue, true);
-	AudioFileClose(recordState.audioFile);
+    if (recordState.recording) {
+        recordState.recording = false;
+        
+        AudioQueueStop(recordState.queue, true);
+         
+        for(int i = 0; i < NUM_BUFFERS; i++)
+            AudioQueueFreeBuffer(recordState.queue, recordState.buffers[i]);
+        
+        AudioQueueDispose(recordState.queue, true);
+        AudioFileClose(recordState.audioFile);
+    }
 }
 
 

@@ -81,6 +81,7 @@ typedef struct
 - (instancetype) init NS_DESIGNATED_INITIALIZER;
 - (void) resetBuffer;
 - (void) startRecording;
+- (void) stopRecording;
 - (void) loadSettings;
 @property (NS_NONATOMIC_IOSONLY, getter=getNoiseLevel) float noiseLevel;
 @property (NS_NONATOMIC_IOSONLY, getter=getPowerMethod) NSInteger powerMethod;

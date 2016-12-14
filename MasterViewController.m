@@ -87,6 +87,13 @@
 
 - (IBAction) powerSwitch
 {
+    if (powerOut.isOn) {
+        powerLabel.text = @"ON";
+        [self.decoder startRecording];
+    } else {
+        powerLabel.text = @"OFF";
+        [self.decoder stopRecording];
+    }
 }
 
 - (IBAction) sendButtonPressed
