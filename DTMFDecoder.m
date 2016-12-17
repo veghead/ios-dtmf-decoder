@@ -249,14 +249,18 @@ void AudioInputCallback(void *inUserData,
 		// Archive the current value if we have more than 2 samples
 		if (( holdingBufferCount[1] > 1 ) || ( rawOutput )) {
 			if (( holdingBuffer[0] != 0 ) && ( holdingBuffer[0] != ' ' ))	{
-				char tmp[20];
+				char tmp[20] = "";
 				if ( rawOutput )	{
-					sprintf(tmp, "%c(%d) ", holdingBuffer[0], holdingBufferCount[0]);
+					snprintf(tmp, 20, "%c(%d) ", holdingBuffer[0], holdingBufferCount[0]);
 				} else {
-					sprintf(tmp, "%c", holdingBuffer[0]);
+					snprintf(tmp, 20, "%c", holdingBuffer[0]);
 				}
-				
-				strcat(recordState->detectBuffer,tmp);
+                NSLog(@".");
+                if (strlen(recordState->detectBuffer) + strlen(tmp) < DETECTBUFFERLEN) {
+                    NSLog(@"-");
+                    strcat(recordState->detectBuffer,tmp);
+                    recordState->bufferChanged = TRUE;
+                }
 				//NSLog(@"Detected %c", tmp);
 			}
 			holdingBuffer[0]	= holdingBuffer[1];
@@ -281,6 +285,7 @@ void AudioInputCallback(void *inUserData,
 	defaults = [NSUserDefaults standardUserDefaults];
 	[self loadSettings];
 	[self setCurrentFreqs:nil];
+    [self resetBuffer];
 	uip = [UIPasteboard generalPasteboard];
 	return self;
 }
@@ -311,10 +316,8 @@ void AudioInputCallback(void *inUserData,
         audioFormat.mBytesPerPacket		= 2;
         audioFormat.mBytesPerFrame		= 2;
         audioFormat.mReserved			= 0;
-        
 
         OSStatus status;
-        
         
         // Create the new audio queue
         status = AudioQueueNewInput (&audioFormat,
@@ -355,7 +358,7 @@ void AudioInputCallback(void *inUserData,
         last = ' ';
         lastcount = 0;
         gaplen = 0;
-        [self resetBuffer];
+        
         
         AudioQueueStart(recordState.queue,NULL);
         NSLog(@"started queue");
@@ -372,6 +375,7 @@ void AudioInputCallback(void *inUserData,
 	if ([self running]) {
 		[self setRunning: NO];
 		memset(recordState.detectBuffer, '\0', DETECTBUFFERLEN);
+        recordState.bufferChanged = TRUE;
 		last = ' ';
 		[self setRunning: YES];
 	}
@@ -461,6 +465,15 @@ void AudioInputCallback(void *inUserData,
 	return res; 
 }
 
+- (BOOL) getBufferChanged
+{
+    return recordState.bufferChanged;
+}
+
+- (void) setBufferChanged:(BOOL)newData
+{
+    recordState.bufferChanged = newData;
+}
 
 
 - (char *) getDetectBuffer

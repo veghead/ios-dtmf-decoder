@@ -12,7 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* dtmfdecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* dtmfdecodeViewController.xib */; };
 		28D7ACF80DDB3853001CB0EB /* dtmfdecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */; };
 		8D0C243C0F2D100D003DA3F2 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C243B0F2D100D003DA3F2 /* on.png */; };
 		8D26612C1DF5040600708802 /* LCDChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D26612B1DF5040600708802 /* LCDChar.m */; };
@@ -38,6 +37,7 @@
 		8D7D886D0ED8C425002199B4 /* LCDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D886C0ED8C425002199B4 /* LCDView.m */; };
 		8D7EF7AE0EDB671D005F123B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7EF7AD0EDB671D005F123B /* CoreAudio.framework */; };
 		8D7EF7B70EDB6749005F123B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7EF7B60EDB6749005F123B /* AudioToolbox.framework */; };
+		8D85756C1E05EE77003DF857 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D85756B1E05EE77003DF857 /* off.png */; };
 		8D92B8D60EDA176600483EBD /* c5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D92B8D40EDA176600483EBD /* c5.png */; };
 		8D92B8D70EDA176600483EBD /* dtmf.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D92B8D50EDA176600483EBD /* dtmf.png */; };
 		8DC642810ED9D3B9002D18A1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DC642800ED9D3B9002D18A1 /* icon.png */; };
@@ -56,7 +56,6 @@
 		1D6058910D05DD3D006BFB54 /* dtmfdecode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dtmfdecode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* dtmfdecodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dtmfdecodeViewController.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* dtmfdecodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtmfdecodeViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dtmfdecodeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		8D7D886C0ED8C425002199B4 /* LCDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDView.m; sourceTree = "<group>"; };
 		8D7EF7AD0EDB671D005F123B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		8D7EF7B60EDB6749005F123B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8D85756B1E05EE77003DF857 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
 		8D92B8D40EDA176600483EBD /* c5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c5.png; sourceTree = "<group>"; };
 		8D92B8D50EDA176600483EBD /* dtmf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dtmf.png; sourceTree = "<group>"; };
 		8DC642800ED9D3B9002D18A1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -172,6 +172,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D85756B1E05EE77003DF857 /* off.png */,
 				8DD5237E1DF5FA1500B70DBB /* D.png */,
 				8DD5237F1DF5FA1500B70DBB /* C.png */,
 				8DD523801DF5FA1500B70DBB /* B.png */,
@@ -192,7 +193,6 @@
 				8D7D88500ED8ABE0002199B4 /* 5.png */,
 				8D7D88510ED8ABE0002199B4 /* 6.png */,
 				8D7D88520ED8ABE0002199B4 /* 7.png */,
-				2899E5210DE3E06400AC0155 /* dtmfdecodeViewController.xib */,
 				8D7D88530ED8ABE0002199B4 /* 8.png */,
 				8D7D88540ED8ABE0002199B4 /* 9.png */,
 				8D7D88550ED8ABE0002199B4 /* decoder.png */,
@@ -272,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2899E5220DE3E06400AC0155 /* dtmfdecodeViewController.xib in Resources */,
 				8D7D88560ED8ABE0002199B4 /* 0.png in Resources */,
 				8D7D88570ED8ABE1002199B4 /* 1.png in Resources */,
 				8D7D88580ED8ABE1002199B4 /* 2.png in Resources */,
@@ -281,6 +280,7 @@
 				8D7D885B0ED8ABE1002199B4 /* 5.png in Resources */,
 				8D7D885C0ED8ABE1002199B4 /* 6.png in Resources */,
 				8D7D885D0ED8ABE1002199B4 /* 7.png in Resources */,
+				8D85756C1E05EE77003DF857 /* off.png in Resources */,
 				8D7D885E0ED8ABE1002199B4 /* 8.png in Resources */,
 				8D7D885F0ED8ABE1002199B4 /* 9.png in Resources */,
 				8D7D88600ED8ABE1002199B4 /* decoder.png in Resources */,

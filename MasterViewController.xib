@@ -32,7 +32,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Ru-ErW" userLabel="LCDView" customClass="LCDView">
                     <rect key="frame" x="96.5" y="227" width="209.5" height="50"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" alpha="0.77900000000000003" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dtmf.png" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-fd-KVg">
+                        <imageView userInteractionEnabled="NO" alpha="0.77900000000000003" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="off.png" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-fd-KVg">
                             <rect key="frame" x="8" y="8" width="52" height="13"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="K05-Yh-awT"/>
@@ -46,6 +46,9 @@
                         <constraint firstAttribute="height" constant="50" id="NyT-yC-BW7"/>
                         <constraint firstItem="qP6-fd-KVg" firstAttribute="top" secondItem="amQ-Ru-ErW" secondAttribute="top" constant="8" id="b6b-Pg-S6N"/>
                     </constraints>
+                    <connections>
+                        <outlet property="modeDisplay" destination="qP6-fd-KVg" id="oDI-16-L5f"/>
+                    </connections>
                 </view>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lL-FJ-JKo">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -91,7 +94,6 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Pp-ogV">
                     <rect key="frame" x="28" y="401" width="320" height="185"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                 </textView>
@@ -124,6 +126,6 @@
     </objects>
     <resources>
         <image name="decoder.png" width="320" height="460"/>
-        <image name="dtmf.png" width="52" height="14"/>
+        <image name="off.png" width="52" height="14"/>
     </resources>
 </document>

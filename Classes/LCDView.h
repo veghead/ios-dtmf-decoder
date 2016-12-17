@@ -22,6 +22,8 @@
 
 #import <UIKit/UIKit.h>
 #define LCD_COLS 15
+#define MODE_OFF 0
+#define MODE_ON  1
 
 @interface LCDView : UIView {
 	IBOutlet UIImageView *modeDisplay;
@@ -38,4 +40,6 @@
 
 - (void)setLCDString:(char*)content;
 - (void)setLEDs:(int)bin;
+- (void)setMode:(int)mode;
+
 @end

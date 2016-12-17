@@ -54,6 +54,19 @@ static LCDChar *disp[LCD_COLS];
 }
 
 
+- (void)setMode:(int)mode {
+    switch(mode) {
+        case MODE_OFF:
+            modeDisplay.image = [UIImage imageNamed:@"off.png"];
+            break;
+        case MODE_ON:
+        default:
+            modeDisplay.image = [UIImage imageNamed:@"dtmf.png"];
+            break;
+    }
+}
+
+
 - (void)setLEDs:(int)bin {
 	UIImageView *disp[8] = {la,lb,lc,ld,le,lf,lg,lh};
 	for (int in = 0; in < 8; in++) {

@@ -55,6 +55,7 @@ typedef struct
 	short						filteredBuffer[BUFFER_SIZE];
 	id							*decoderObject;
 	char						*detectBuffer;
+    BOOL                        bufferChanged;
 } recordState_t;
 
 
@@ -83,6 +84,7 @@ typedef struct
 - (void) startRecording;
 - (void) stopRecording;
 - (void) loadSettings;
+@property (NS_NONATOMIC_IOSONLY, getter=getBufferChanged) BOOL bufferChanged;
 @property (NS_NONATOMIC_IOSONLY, getter=getNoiseLevel) float noiseLevel;
 @property (NS_NONATOMIC_IOSONLY, getter=getPowerMethod) NSInteger powerMethod;
 @property (NS_NONATOMIC_IOSONLY, getter=getDetectBuffer, readonly) char *detectBuffer;

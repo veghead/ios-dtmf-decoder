@@ -53,9 +53,13 @@
 
 - (void)tick:(NSTimer *)timer
 {
-    [self.lcdView setLCDString:[self.decoder getDetectBuffer]];
-    //NSLog(@" buffer:%s", [self.decoder getDetectBuffer]);
     [self.lcdView setLEDs:[self.decoder ledbin]];
+    if (self.decoder.bufferChanged) {
+        [self.lcdView setLCDString:self.decoder.getDetectBuffer];
+        textView.text = @(self.decoder.getDetectBuffer);
+        //NSLog(@" buffer:%s", [self.decoder getDetectBuffer]);
+        self.decoder.bufferChanged = false;
+    }
 }
 
 
@@ -90,8 +94,10 @@
     if (powerOut.isOn) {
         powerLabel.text = @"ON";
         [self.decoder startRecording];
+        [self.lcdView setMode:MODE_ON];
     } else {
         powerLabel.text = @"OFF";
+        [self.lcdView setMode:MODE_OFF];
         [self.decoder stopRecording];
     }
 }
