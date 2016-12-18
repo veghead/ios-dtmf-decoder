@@ -1,6 +1,5 @@
 /*
-
- Dreadtech DTMF Decoder - Copyright 2016 Martin Wellard
+Dreadtech DTMF Decoder - Copyright 2016 Martin Wellard
 
 This file is part of Dreadtech DTMF Decoder.
 
