@@ -13,7 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* dtmfdecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */; };
-		8D0C243C0F2D100D003DA3F2 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C243B0F2D100D003DA3F2 /* on.png */; };
+		8D0C243C0F2D100D003DA3F2 /* ledon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C243B0F2D100D003DA3F2 /* ledon.png */; };
 		8D26612C1DF5040600708802 /* LCDChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D26612B1DF5040600708802 /* LCDChar.m */; };
 		8D3BEF2B1B1E8CEE009B0AA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3BEF2A1B1E8CEE009B0AA5 /* Default-568h@2x.png */; };
 		8D3F0D570EE3557500684B0B /* #.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3F0D550EE3557500684B0B /* #.png */; };
@@ -63,7 +63,7 @@
 		28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dtmfdecodeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* dtmfdecode_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtmfdecode_Prefix.pch; sourceTree = "<group>"; };
-		8D0C243B0F2D100D003DA3F2 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
+		8D0C243B0F2D100D003DA3F2 /* ledon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D26612A1DF5040600708802 /* LCDChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDChar.h; sourceTree = "<group>"; };
 		8D26612B1DF5040600708802 /* LCDChar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDChar.m; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 				8D6DED8F1E073000005F8F4D /* gear@2x.png */,
 				8D6DED901E073000005F8F4D /* gear@3x.png */,
 				8D5A1E0F0F48C90E0032949B /* Entitlements.plist */,
-				8D0C243B0F2D100D003DA3F2 /* on.png */,
+				8D0C243B0F2D100D003DA3F2 /* ledon.png */,
 				8D3F0D550EE3557500684B0B /* #.png */,
 				8D3F0D560EE3557500684B0B /* *.png */,
 				8D92B8D40EDA176600483EBD /* c5.png */,
@@ -303,7 +303,7 @@
 				8D3BEF2B1B1E8CEE009B0AA5 /* Default-568h@2x.png in Resources */,
 				8D3F0D580EE3557500684B0B /* *.png in Resources */,
 				8DD8008E0EEC98200082C570 /* Default.png in Resources */,
-				8D0C243C0F2D100D003DA3F2 /* on.png in Resources */,
+				8D0C243C0F2D100D003DA3F2 /* ledon.png in Resources */,
 				8D6DED8E1E070A53005F8F4D /* gear.png in Resources */,
 				8D6DED911E073000005F8F4D /* gear@2x.png in Resources */,
 				8D5A1E100F48C90E0032949B /* Entitlements.plist in Resources */,

@@ -62,31 +62,28 @@ typedef struct
 @interface DTMFDecoder : NSObject {	
 	AudioStreamBasicDescription audioFormat;
 	int			sample_count;
-	double		*currentFreqs;
-	int			lastcount;
 	int			gaplen;
 	char		last;
-	int			ledbin;
-	bool		running;
 	recordState_t recordState;
 	UIPasteboard *uip;
 	NSUserDefaults	*defaults;	
 
 }
 
-@property (assign)		int lastcount;
-@property (assign)		double *currentFreqs;
-@property (assign)		int ledbin;
-@property (readwrite)	bool running;
 
 - (instancetype) init NS_DESIGNATED_INITIALIZER;
 - (void) resetBuffer;
 - (void) startRecording;
 - (void) stopRecording;
 - (void) loadSettings;
+- (void) copyBuffer;
+
 @property (NS_NONATOMIC_IOSONLY, getter=getBufferChanged) BOOL bufferChanged;
 @property (NS_NONATOMIC_IOSONLY, getter=getNoiseLevel) float noiseLevel;
 @property (NS_NONATOMIC_IOSONLY, getter=getPowerMethod) NSInteger powerMethod;
 @property (NS_NONATOMIC_IOSONLY, getter=getDetectBuffer, readonly) char *detectBuffer;
-- (void) copyBuffer;
+@property (assign)                      int lastcount;
+@property (assign)                      double *currentFreqs;
+@property (nonatomic, getter=getLedBin)	int ledbin;
+@property (readwrite)                   bool running;
 @end

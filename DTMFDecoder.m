@@ -33,6 +33,7 @@ static int		holdingBufferCount[2];
 static int		powerMeasurementMethod;	// 0 = Peak Value -> RMS, 1 = Sqrt of Sum of Squares, 2 = Sum of Abs Values
 static BOOL		rawOutput;
 static double	noiseToleranceFactor;
+static uint8_t  leds;
 
 
 
@@ -107,8 +108,11 @@ char lookupDTMFCode(void)
 		if (( i == max1Index ) || ( i == max2Index ))	continue;
 		
 		if (powers[i] > ( powers[max2Index] / noiseToleranceFactor )) {valid = NO;break;}
+        
 	}
 	
+    leds = (1 << max1Index) | (1 << max2Index);
+    
 	if ( valid ) {
 		// NSLog(@"Highest Frequencies found: %d %d", max1Index, max2Index);
 		
@@ -255,9 +259,7 @@ void AudioInputCallback(void *inUserData,
 				} else {
 					snprintf(tmp, 20, "%c", holdingBuffer[0]);
 				}
-                NSLog(@".");
                 if (strlen(recordState->detectBuffer) + strlen(tmp) < DETECTBUFFERLEN) {
-                    NSLog(@"-");
                     strcat(recordState->detectBuffer,tmp);
                     recordState->bufferChanged = TRUE;
                 }
@@ -275,8 +277,6 @@ void AudioInputCallback(void *inUserData,
 
 
 @implementation DTMFDecoder
-
-@synthesize currentFreqs, running, lastcount, ledbin;
 
 -(instancetype) init
 {
@@ -303,7 +303,7 @@ void AudioInputCallback(void *inUserData,
             holdingBuffer[i] = ' ';
         }
         AudioQueueBufferRef qref[NUM_BUFFERS];
-        currentFreqs = nil;
+        self.currentFreqs = nil;
         
         // these statements define the audio stream basic description
         // for the file to record into.
@@ -356,14 +356,13 @@ void AudioInputCallback(void *inUserData,
         }
 
         last = ' ';
-        lastcount = 0;
+        self.lastcount = 0;
         gaplen = 0;
-        
         
         AudioQueueStart(recordState.queue,NULL);
         NSLog(@"started queue");
         recordState.recording = true; 
-        running = YES;
+        self.running = YES;
         return;
     }
 }
@@ -410,8 +409,6 @@ void AudioInputCallback(void *inUserData,
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopRecording) name:UIApplicationWillTerminateNotification object:nil];
     [super awakeFromNib];
 }
-
-
 
 
 - (void)loadSettings
@@ -481,7 +478,10 @@ void AudioInputCallback(void *inUserData,
 	return recordState.detectBuffer;
 }
 
-
+- (int) getLedBin
+{
+    return leds;
+}
 
 - (void) copyBuffer
 {

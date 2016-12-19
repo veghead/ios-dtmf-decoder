@@ -47,6 +47,14 @@
                         <constraint firstItem="qP6-fd-KVg" firstAttribute="top" secondItem="amQ-Ru-ErW" secondAttribute="top" constant="8" id="b6b-Pg-S6N"/>
                     </constraints>
                     <connections>
+                        <outlet property="la" destination="VZe-WQ-PVB" id="2hF-rK-hyt"/>
+                        <outlet property="lb" destination="8Nj-sv-jwq" id="Fna-Xo-InP"/>
+                        <outlet property="lc" destination="PZ1-ti-xBV" id="53T-N4-gUe"/>
+                        <outlet property="ld" destination="vRf-zL-oGr" id="w5x-Gu-stk"/>
+                        <outlet property="le" destination="N2c-ag-kKQ" id="R6t-wU-rq7"/>
+                        <outlet property="lf" destination="gTq-qp-vfQ" id="RGO-Ue-pgL"/>
+                        <outlet property="lg" destination="KGE-On-MzX" id="kms-fn-MsL"/>
+                        <outlet property="lh" destination="YeM-0y-OK0" id="hVQ-uh-5qp"/>
                         <outlet property="modeDisplay" destination="qP6-fd-KVg" id="oDI-16-L5f"/>
                     </connections>
                 </view>
@@ -91,33 +99,73 @@
                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Decoded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-Bf-309">
-                    <rect key="frame" x="28" y="372" width="89" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decoded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-Bf-309">
+                    <rect key="frame" x="30" y="376" width="69.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.9436207400721236" green="1" blue="0.93251960771557152" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-WQ-PVB" userLabel="led1">
+                    <rect key="frame" x="62" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Nj-sv-jwq" userLabel="led2">
+                    <rect key="frame" x="95" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-ti-xBV" userLabel="led3">
+                    <rect key="frame" x="129" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-zL-oGr" userLabel="led4">
+                    <rect key="frame" x="163" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="N2c-ag-kKQ" userLabel="led5">
+                    <rect key="frame" x="198" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gTq-qp-vfQ" userLabel="led6">
+                    <rect key="frame" x="232" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="KGE-On-MzX" userLabel="led7">
+                    <rect key="frame" x="267" y="115" width="11" height="12"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledon.png" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-0y-OK0" userLabel="led8">
+                    <rect key="frame" x="302" y="115" width="11" height="12"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.25889493944187014" green="0.25749550733677895" blue="0.26029437154696133" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="YeM-0y-OK0" firstAttribute="centerY" secondItem="KGE-On-MzX" secondAttribute="centerY" id="0Ef-qA-fTg"/>
+                <constraint firstItem="KGE-On-MzX" firstAttribute="leading" secondItem="gTq-qp-vfQ" secondAttribute="trailing" constant="24" id="1nB-Ci-UbE"/>
                 <constraint firstItem="QSk-JC-c5H" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="bottom" constant="-52" id="4DJ-mi-9aJ"/>
+                <constraint firstItem="gTq-qp-vfQ" firstAttribute="leading" secondItem="N2c-ag-kKQ" secondAttribute="trailing" constant="23" id="7UZ-rJ-qo2"/>
                 <constraint firstItem="qpm-Pp-ogV" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="bottom" constant="31" id="Adb-l1-R5e"/>
                 <constraint firstItem="TAw-f0-JF0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Arj-WP-Av8"/>
                 <constraint firstItem="wLn-Bf-309" firstAttribute="leading" secondItem="qpm-Pp-ogV" secondAttribute="leading" constant="2" id="BC0-k6-Gss"/>
+                <constraint firstItem="PZ1-ti-xBV" firstAttribute="leading" secondItem="8Nj-sv-jwq" secondAttribute="trailing" constant="23" id="Ehm-MQ-KVw"/>
                 <constraint firstItem="amQ-Ru-ErW" firstAttribute="leading" secondItem="TAw-f0-JF0" secondAttribute="leading" constant="69" id="HSM-Zw-ejJ"/>
+                <constraint firstItem="YeM-0y-OK0" firstAttribute="leading" secondItem="KGE-On-MzX" secondAttribute="trailing" constant="24" id="K2Y-sJ-3g1"/>
+                <constraint firstItem="vRf-zL-oGr" firstAttribute="leading" secondItem="PZ1-ti-xBV" secondAttribute="trailing" constant="23" id="LHS-cf-qkh"/>
+                <constraint firstItem="vRf-zL-oGr" firstAttribute="centerY" secondItem="PZ1-ti-xBV" secondAttribute="centerY" id="Lsr-4B-vfI"/>
                 <constraint firstItem="TAw-f0-JF0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="O3m-rv-wPP"/>
                 <constraint firstItem="2mT-6i-Jcj" firstAttribute="top" secondItem="QSk-JC-c5H" secondAttribute="bottom" constant="8" id="Oa5-zj-bbL"/>
+                <constraint firstItem="KGE-On-MzX" firstAttribute="centerY" secondItem="gTq-qp-vfQ" secondAttribute="centerY" id="PgO-yA-Mnv"/>
                 <constraint firstItem="1lL-FJ-JKo" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="QjG-r4-mGw"/>
                 <constraint firstAttribute="trailing" secondItem="amQ-Ru-ErW" secondAttribute="trailing" constant="69" id="TUx-Fc-lFG"/>
                 <constraint firstItem="1lL-FJ-JKo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UjX-rQ-mKq"/>
+                <constraint firstItem="8Nj-sv-jwq" firstAttribute="leading" secondItem="VZe-WQ-PVB" secondAttribute="trailing" constant="22" id="VsE-fU-cTE"/>
+                <constraint firstItem="N2c-ag-kKQ" firstAttribute="leading" secondItem="vRf-zL-oGr" secondAttribute="trailing" constant="24" id="WEQ-Ph-xOt"/>
+                <constraint firstItem="N2c-ag-kKQ" firstAttribute="centerY" secondItem="vRf-zL-oGr" secondAttribute="centerY" id="YrI-4h-yN2"/>
                 <constraint firstItem="QSk-JC-c5H" firstAttribute="leading" secondItem="TAw-f0-JF0" secondAttribute="trailing" constant="-67.5" id="Z04-yK-lbo"/>
                 <constraint firstItem="wLn-Bf-309" firstAttribute="bottom" secondItem="qpm-Pp-ogV" secondAttribute="top" constant="-4" id="eHc-Fu-al8"/>
+                <constraint firstItem="8Nj-sv-jwq" firstAttribute="centerY" secondItem="VZe-WQ-PVB" secondAttribute="centerY" id="fDQ-dz-UVu"/>
                 <constraint firstAttribute="bottom" secondItem="1lL-FJ-JKo" secondAttribute="bottom" id="g0b-TA-C8r"/>
                 <constraint firstItem="2mT-6i-Jcj" firstAttribute="centerX" secondItem="QSk-JC-c5H" secondAttribute="centerX" id="gYa-6S-qdN"/>
                 <constraint firstItem="amQ-Ru-ErW" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="top" constant="207" id="ghX-Kt-Ml8"/>
                 <constraint firstItem="qpm-Pp-ogV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="jp3-bf-X1E"/>
                 <constraint firstAttribute="trailing" secondItem="qpm-Pp-ogV" secondAttribute="trailing" constant="27" id="k8y-Fe-sVW"/>
                 <constraint firstItem="qpm-Pp-ogV" firstAttribute="bottom" secondItem="1lL-FJ-JKo" secondAttribute="top" constant="-37" id="p7S-0a-2sB"/>
+                <constraint firstItem="PZ1-ti-xBV" firstAttribute="centerY" secondItem="8Nj-sv-jwq" secondAttribute="centerY" id="pcX-yK-zMS"/>
+                <constraint firstItem="VZe-WQ-PVB" firstAttribute="top" secondItem="TAw-f0-JF0" secondAttribute="top" constant="95" id="t3x-AC-9EQ"/>
+                <constraint firstItem="gTq-qp-vfQ" firstAttribute="centerY" secondItem="N2c-ag-kKQ" secondAttribute="centerY" id="wQ0-NJ-JoL"/>
+                <constraint firstItem="VZe-WQ-PVB" firstAttribute="leading" secondItem="TAw-f0-JF0" secondAttribute="leading" constant="34" id="yty-RQ-Amh"/>
             </constraints>
             <point key="canvasLocation" x="-118.5" y="-22.5"/>
         </view>
@@ -129,6 +177,7 @@
     <resources>
         <image name="decoder.png" width="320" height="460"/>
         <image name="gear.png" width="32" height="32"/>
+        <image name="ledon.png" width="11" height="12"/>
         <image name="off.png" width="52" height="14"/>
     </resources>
 </document>

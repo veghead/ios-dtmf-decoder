@@ -67,7 +67,7 @@ along with Dreadtech DTMF Decoder.  If not, see <http://www.gnu.org/licenses/>.
 
 - (void)tick:(NSTimer *)timer
 {
-    [self.lcdView setLEDs:[self.decoder ledbin]];
+    [self.lcdView setLEDs:[self.decoder getLedBin]];
     if (self.decoder.bufferChanged) {
         [self.lcdView setLCDString:self.decoder.getDetectBuffer];
         textView.text = @(self.decoder.getDetectBuffer);

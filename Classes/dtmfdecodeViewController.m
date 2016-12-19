@@ -63,8 +63,7 @@
 - (void)tick:(NSTimer *)timer
 {
 	[(LCDView *)self.view setLCDString:[self.decoder getDetectBuffer]];
-	//NSLog(@" buffer:%s", [self.decoder getDetectBuffer]);
-	[(LCDView *)self.view setLEDs:[self.decoder ledbin]];
+	[(LCDView *)self.view setLEDs:[self.decoder getLedBin]];
 }
 
 
