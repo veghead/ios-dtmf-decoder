@@ -113,6 +113,7 @@ along with Dreadtech DTMF Decoder.  If not, see <http://www.gnu.org/licenses/>.
         powerLabel.text = @"OFF";
         [self.lcdView setMode:MODE_OFF];
         [self.decoder stopRecording];
+        [self.lcdView setLEDs:0];
     }
 }
 

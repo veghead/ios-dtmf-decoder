@@ -397,6 +397,7 @@ void AudioInputCallback(void *inUserData,
         
         AudioQueueDispose(recordState.queue, true);
         AudioFileClose(recordState.audioFile);
+        leds = 0;
     }
 }
 
