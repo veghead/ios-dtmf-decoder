@@ -24,6 +24,7 @@
 		8D6DED8E1E070A53005F8F4D /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DED8D1E070A53005F8F4D /* gear.png */; };
 		8D6DED911E073000005F8F4D /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DED8F1E073000005F8F4D /* gear@2x.png */; };
 		8D6DED921E073000005F8F4D /* gear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DED901E073000005F8F4D /* gear@3x.png */; };
+		8D6DED941E0770D2005F8F4D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DED931E0770D2005F8F4D /* icon@2x.png */; };
 		8D71618F1DEA237D003F3F86 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D71618D1DEA237D003F3F86 /* MasterViewController.m */; };
 		8D7161901DEA237D003F3F86 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D71618E1DEA237D003F3F86 /* MasterViewController.xib */; };
 		8D7D88560ED8ABE0002199B4 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D884B0ED8ABE0002199B4 /* 0.png */; };
@@ -77,6 +78,7 @@
 		8D6DED8D1E070A53005F8F4D /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		8D6DED8F1E073000005F8F4D /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
 		8D6DED901E073000005F8F4D /* gear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@3x.png"; sourceTree = "<group>"; };
+		8D6DED931E0770D2005F8F4D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8D71618C1DEA237D003F3F86 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ../MasterViewController.h; sourceTree = "<group>"; };
 		8D71618D1DEA237D003F3F86 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ../MasterViewController.m; sourceTree = "<group>"; };
 		8D71618E1DEA237D003F3F86 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				8D92B8D40EDA176600483EBD /* c5.png */,
 				8D92B8D50EDA176600483EBD /* dtmf.png */,
 				8DC642800ED9D3B9002D18A1 /* icon.png */,
+				8D6DED931E0770D2005F8F4D /* icon@2x.png */,
 				8D7D884B0ED8ABE0002199B4 /* 0.png */,
 				8D7D884C0ED8ABE0002199B4 /* 1.png */,
 				8D7D884D0ED8ABE0002199B4 /* 2.png */,
@@ -291,6 +294,7 @@
 				8D7D885D0ED8ABE1002199B4 /* 7.png in Resources */,
 				8D85756C1E05EE77003DF857 /* off.png in Resources */,
 				8D7D885E0ED8ABE1002199B4 /* 8.png in Resources */,
+				8D6DED941E0770D2005F8F4D /* icon@2x.png in Resources */,
 				8D7D885F0ED8ABE1002199B4 /* 9.png in Resources */,
 				8D7D88600ED8ABE1002199B4 /* decoder.png in Resources */,
 				8DD523821DF5FA1500B70DBB /* D.png in Resources */,
@@ -342,6 +346,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.8;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -360,6 +365,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dtmfdecode_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
@@ -409,6 +415,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dtmfdecode_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
