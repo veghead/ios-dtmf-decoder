@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* dtmfdecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */; };
+		8D01B6E02A76D1F600670333 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D01B6DE2A76D1F600670333 /* icon120.png */; };
+		8D01B6E42A76D79E00670333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D01B6E32A76D79E00670333 /* Assets.xcassets */; };
 		8D0C243C0F2D100D003DA3F2 /* ledon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C243B0F2D100D003DA3F2 /* ledon.png */; };
 		8D26612C1DF5040600708802 /* LCDChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D26612B1DF5040600708802 /* LCDChar.m */; };
 		8D3BEF2B1B1E8CEE009B0AA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D3BEF2A1B1E8CEE009B0AA5 /* Default-568h@2x.png */; };
@@ -64,6 +66,8 @@
 		28D7ACF70DDB3853001CB0EB /* dtmfdecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dtmfdecodeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* dtmfdecode_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtmfdecode_Prefix.pch; sourceTree = "<group>"; };
+		8D01B6DE2A76D1F600670333 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		8D01B6E32A76D79E00670333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D0C243B0F2D100D003DA3F2 /* ledon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D26612A1DF5040600708802 /* LCDChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDChar.h; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8D01B6E32A76D79E00670333 /* Assets.xcassets */,
 				8D3BEF2A1B1E8CEE009B0AA5 /* Default-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -180,6 +185,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D01B6DE2A76D1F600670333 /* icon120.png */,
 				8D85756B1E05EE77003DF857 /* off.png */,
 				8DD5237E1DF5FA1500B70DBB /* D.png */,
 				8DD5237F1DF5FA1500B70DBB /* C.png */,
@@ -256,7 +262,7 @@
 				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = XRD76M6JHN;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -297,6 +303,7 @@
 				8D6DED941E0770D2005F8F4D /* icon@2x.png in Resources */,
 				8D7D885F0ED8ABE1002199B4 /* 9.png in Resources */,
 				8D7D88600ED8ABE1002199B4 /* decoder.png in Resources */,
+				8D01B6E42A76D79E00670333 /* Assets.xcassets in Resources */,
 				8DD523821DF5FA1500B70DBB /* D.png in Resources */,
 				8DC642810ED9D3B9002D18A1 /* icon.png in Resources */,
 				8D92B8D60EDA176600483EBD /* c5.png in Resources */,
@@ -313,6 +320,7 @@
 				8D5A1E100F48C90E0032949B /* Entitlements.plist in Resources */,
 				8DD523831DF5FA1500B70DBB /* C.png in Resources */,
 				8DD523851DF5FA1500B70DBB /* A.png in Resources */,
+				8D01B6E02A76D1F600670333 /* icon120.png in Resources */,
 				8DD523841DF5FA1500B70DBB /* B.png in Resources */,
 				8D5F4BAC0FB5DDD4004AAC24 /* settings.xib in Resources */,
 			);
@@ -343,18 +351,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.11.0;
+				DEVELOPMENT_TEAM = XRD76M6JHN;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dtmfdecode_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DTMF Decoder";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dreadtech.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = dtmfdecode;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -362,16 +376,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.11.0;
+				DEVELOPMENT_TEAM = XRD76M6JHN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dtmfdecode_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DTMF Decoder";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dreadtech.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = dtmfdecode;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -400,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "F645BA6D-FB9C-48A0-BF23-7B215BB32BE7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B72839F-B21C-4302-BE0E-7A492E82AB1C";
@@ -412,16 +432,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.11.0;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XRD76M6JHN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dtmfdecode_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DTMF Decoder";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dreadtech.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = dtmfdecode;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Martin Wellard iOS App Store";
 			};
 			name = Distribution;
 		};
@@ -449,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "128faa53-ffdf-4b02-a913-bf6a037b3370";
 				SDKROOT = iphoneos;
@@ -480,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B72839F-B21C-4302-BE0E-7A492E82AB1C";
 				SDKROOT = iphoneos;

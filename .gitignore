@@ -3,3 +3,4 @@ dtmfdecode.xcodeproj/xcuserdata/
 dtmfdecode.xcworkspace/xcuserdata/
 dtmfdecode.xcodeproj/veghead.mode1v3
 *.bak
+.DS_Store
